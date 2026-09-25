@@ -21,7 +21,7 @@ public class Pengaduan {
     private String tanggalPengaduan;
     private String status;
     
-    //Constructor dipanggil saat objek Pengaduan baru dibuat. 
+    //Constructor 1 dipanggil saat objek Pengaduan baru dibuat. 
     //Digunakan untuk mengisi nilai awal dari atribut pengaduan.
     public Pengaduan(String idPengaduan, String namaPelapor,
                      String jenisPengaduan, String isiPengaduan,
@@ -34,6 +34,16 @@ public class Pengaduan {
         this.tanggalPengaduan = tanggalPengaduan;
         //Agar status awal selalu "Menunggi Konfirmasi Petugas" , baik dalam pengaduan darurat ataupun biasa
         this.status = "Menunggu Konfirmasi Petugas";
+    }
+      // Constructor 2 (Overloaded): Menggunakan Constructor Chaining
+    public Pengaduan(String idPengaduan, String namaPelapor,
+                     String jenisPengaduan, String isiPengaduan,
+                     String tanggalPengaduan, String status) {
+
+        // Memanggil Constructor 1 untuk mengisi 5 atribut utama
+        this(idPengaduan, namaPelapor, jenisPengaduan, isiPengaduan, tanggalPengaduan);
+        // Memperbarui status dengan nilai kustom dari parameter
+        this.status = status; 
     }
     //Penerapan Getter Pada Sistem digunakan untuk mengambil atau membaca nilai atribut
     public String getIdPengaduan() {
