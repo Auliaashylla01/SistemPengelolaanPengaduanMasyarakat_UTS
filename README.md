@@ -358,7 +358,7 @@ Ketika pengguna memilih menu `5`, program menampilkan pesan penutup dan mengakhi
 
 # 6. Penerapan Ketentuan OOP
 
-## A. Access Modifier
+## 6.1. Access Modifier
 
 Access modifier digunakan untuk mengatur hak akses terhadap atribut dan method di dalam class.
 
@@ -372,7 +372,7 @@ Atribut tersebut tidak dapat diakses secara langsung dari class lain. Akses terh
 
 ---
 
-## B. Encapsulation
+## 6.2. Encapsulation
 
 **Encapsulation** diterapkan dengan menyembunyikan data internal object melalui atribut `private` dan menyediakan method `getter` serta `setter` sesuai kebutuhan.
 
@@ -386,7 +386,7 @@ Atribut `idPengaduan` tidak memiliki `setter`. Hal tersebut dilakukan karena ID 
 
 ---
 
-## C. Inheritance
+## 6.3. Inheritance
 
 **Inheritance** digunakan dengan membuat class `Pengaduan` sebagai superclass yang memiliki atribut dan method umum untuk seluruh jenis pengaduan.
 
@@ -410,3 +410,43 @@ Contoh:
 Dengan inheritance, atribut dan perilaku umum tidak perlu ditulis kembali pada masing-masing subclass.
 
 ---
+
+## 6.4. Polymorphism (Method Overriding/Overloding)
+
+Polymorphism diterapkan melalui method overriding pada kedua subclass.
+
+Class Pengaduan memiliki method:
+
+<img width="523" height="175" alt="Screenshot 2026-09-24 105151" src="https://github.com/user-attachments/assets/8b86646d-f6b0-4086-b717-6d18b0a1ec82" />                
+
+Method tersebut kemudian dioverride pada class `pengaduanBiasa` dan `pengaduanDarurat`.
+
+Pada `pengaduanBiasa`:
+
+<img width="712" height="176" alt="Screenshot 2026-09-24 105335" src="https://github.com/user-attachments/assets/7f64d18a-670a-4fb3-91ab-e40b683cf380" />                
+
+Sedangkan pada `pengaduanDarurat`:
+
+<img width="791" height="179" alt="Screenshot 2026-09-24 102822" src="https://github.com/user-attachments/assets/1b9a259c-597e-4eaa-bda6-00d28f1e343f" />            
+
+Method `getDetailPengaduan()` juga dioverride pada kedua subclass untuk menampilkan informasi tambahan sesuai dengan jenis pengaduannya.
+
+Penerapan ini membuat method yang sama dapat menghasilkan perilaku yang berbeda sesuai object yang digunakan.
+
+---
+
+## 6.5. Polymorphism - Method Overloading
+
+Selain overriding, program juga menerapkan polymorphism melalui method overloading pada constructor class `Pengaduan`.
+
+Constructor pertama digunakan untuk membuat object dengan data utama pengaduan:
+
+<img width="643" height="197" alt="image" src="https://github.com/user-attachments/assets/ca0496cf-e048-47fd-abfa-18de6603bd41" />                    
+
+Constructor kedua memiliki parameter tambahan berupa `status`:
+
+<img width="500" height="145" alt="image" src="https://github.com/user-attachments/assets/3a954197-41ab-46d4-adb9-c27425b38090" />                
+
+Kedua constructor memiliki nama yang sama, yaitu Pengaduan, tetapi memiliki jumlah parameter yang berbeda. Hal tersebut merupakan method overloading karena Java dapat menentukan constructor yang digunakan berdasarkan parameter yang diberikan saat object dibuat.        
+
+
