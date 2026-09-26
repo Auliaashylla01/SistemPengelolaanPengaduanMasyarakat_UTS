@@ -392,8 +392,8 @@ Atribut `idPengaduan` tidak memiliki `setter`. Hal tersebut dilakukan karena ID 
 
 Dua subclass mewarisi class tersebut:                        
 
-<img width="420" height="50" alt="image" src="https://github.com/user-attachments/assets/7867d53a-aab1-4c7e-b240-38ac9667ed98" />                    
-
+<img width="650" height="205" alt="Screenshot 2026-09-24 102039" src="https://github.com/user-attachments/assets/07d38eb8-0684-4561-987b-2c377e467402" />                
+      
 *Gambar 10: Penerapan inheritance pada class `pengaduanBiasa` melalui keyword `extends` dan penggunaan `super()` untuk memanggil constructor superclass `Pengaduan`.*
 
 <img width="449" height="62" alt="image" src="https://github.com/user-attachments/assets/8d4f92c8-39de-4783-9c28-5402edc97443" />            
@@ -417,7 +417,8 @@ Polymorphism diterapkan melalui method overriding pada kedua subclass.
 
 Class Pengaduan memiliki method:
 
-<img width="523" height="175" alt="Screenshot 2026-09-24 105151" src="https://github.com/user-attachments/assets/8b86646d-f6b0-4086-b717-6d18b0a1ec82" />        
+<img width="650" height="205" alt="Screenshot 2026-09-24 102039" src="https://github.com/user-attachments/assets/c4f59f75-82a1-4cc1-aac7-d78343b801fb" />                
+  
 
 *Gambar 13: Penerapan polymorphism melalui method overriding pada subclass `pengaduanBiasa` dan `pengaduanDarurat` dengan mengimplementasikan kembali method dari superclass `Pengaduan`.*
 
