@@ -411,23 +411,29 @@ Dengan inheritance, atribut dan perilaku umum tidak perlu ditulis kembali pada m
 
 ---
 
-## 6.4. Polymorphism (Method Overriding/Overloding)
+## 6.4. Polymorphism - Method Overriding
 
 Polymorphism diterapkan melalui method overriding pada kedua subclass.
 
 Class Pengaduan memiliki method:
 
-<img width="523" height="175" alt="Screenshot 2026-09-24 105151" src="https://github.com/user-attachments/assets/8b86646d-f6b0-4086-b717-6d18b0a1ec82" />                
+<img width="523" height="175" alt="Screenshot 2026-09-24 105151" src="https://github.com/user-attachments/assets/8b86646d-f6b0-4086-b717-6d18b0a1ec82" />        
+
+*Gambar 13: Penerapan polymorphism melalui method overriding pada subclass `pengaduanBiasa` dan `pengaduanDarurat` dengan mengimplementasikan kembali method dari superclass `Pengaduan`.*
 
 Method tersebut kemudian dioverride pada class `pengaduanBiasa` dan `pengaduanDarurat`.
 
 Pada `pengaduanBiasa`:
 
-<img width="712" height="176" alt="Screenshot 2026-09-24 105335" src="https://github.com/user-attachments/assets/7f64d18a-670a-4fb3-91ab-e40b683cf380" />                
+<img width="712" height="176" alt="Screenshot 2026-09-24 105335" src="https://github.com/user-attachments/assets/7f64d18a-670a-4fb3-91ab-e40b683cf380" />  
+
+*Gambar 14: Penerapan method overriding pada `getTingkatUrgensi()` di subclass untuk menghasilkan tingkat urgensi sesuai jenis pengaduan.*
 
 Sedangkan pada `pengaduanDarurat`:
 
-<img width="791" height="179" alt="Screenshot 2026-09-24 102822" src="https://github.com/user-attachments/assets/1b9a259c-597e-4eaa-bda6-00d28f1e343f" />            
+<img width="791" height="179" alt="Screenshot 2026-09-24 102822" src="https://github.com/user-attachments/assets/1b9a259c-597e-4eaa-bda6-00d28f1e343f" />  
+
+*Gambar 15: Penerapan method overriding pada `getTingkatUrgensi()` di subclass untuk menghasilkan tingkat urgensi sesuai jenis pengaduan.*
 
 Method `getDetailPengaduan()` juga dioverride pada kedua subclass untuk menampilkan informasi tambahan sesuai dengan jenis pengaduannya.
 
@@ -441,12 +447,47 @@ Selain overriding, program juga menerapkan polymorphism melalui method overloadi
 
 Constructor pertama digunakan untuk membuat object dengan data utama pengaduan:
 
-<img width="643" height="197" alt="image" src="https://github.com/user-attachments/assets/ca0496cf-e048-47fd-abfa-18de6603bd41" />                    
+<img width="643" height="197" alt="image" src="https://github.com/user-attachments/assets/ca0496cf-e048-47fd-abfa-18de6603bd41" />    
+
+*Gambar 16: Penerapan polymorphism melalui constructor overloading pada class `Pengaduan`, yang memiliki dua constructor dengan jumlah parameter berbeda.*
 
 Constructor kedua memiliki parameter tambahan berupa `status`:
 
-<img width="500" height="145" alt="image" src="https://github.com/user-attachments/assets/3a954197-41ab-46d4-adb9-c27425b38090" />                
+<img width="500" height="145" alt="image" src="https://github.com/user-attachments/assets/3a954197-41ab-46d4-adb9-c27425b38090" />         
 
-Kedua constructor memiliki nama yang sama, yaitu Pengaduan, tetapi memiliki jumlah parameter yang berbeda. Hal tersebut merupakan method overloading karena Java dapat menentukan constructor yang digunakan berdasarkan parameter yang diberikan saat object dibuat.        
+*Gambar 16: Penerapan polymorphism melalui constructor overloading pada class `Pengaduan`, yang memiliki dua constructor dengan jumlah parameter berbeda.*
+
+Kedua constructor memiliki nama yang sama, yaitu Pengaduan, tetapi memiliki jumlah parameter yang berbeda. Hal tersebut merupakan method overloading karena Java dapat menentukan constructor yang digunakan berdasarkan parameter yang diberikan saat object dibuat.     
+
+---
+
+## 6.6. Condition
+
+Condition digunakan untuk menentukan proses yang dijalankan berdasarkan kondisi tertentu. Program menggunakan percabangan if, if-else, serta switch pada beberapa bagian sistem.
+
+Salah satu penerapannya terdapat pada class `ValidasiInput` bagian validasi input menu:
+
+<img width="501" height="232" alt="image" src="https://github.com/user-attachments/assets/3fe7b6b4-62e0-4742-8a31-395f302afeee" />     
+
+*Gambar 17: Penerapan condition menggunakan if untuk menentukan proses berdasarkan kondisi status pengaduan.*
+
+Percabangan tersebut digunakan untuk memastikan input menu berupa angka dan pilihan menu 1-5. Selain if, program menggunakan switch untuk menangani pilihan menu dan kategori pengaduan.
+
+---
 
 
+## 6.7. Looping
+
+Looping digunakan agar proses tertentu dapat dilakukan berulang kali selama kondisi yang ditentukan masih terpenuhi.
+
+Pada menu utama, program menggunakan do-while:
+
+<img width="547" height="331" alt="image" src="https://github.com/user-attachments/assets/ed00c9bb-0c7d-4e71-91d2-7079bb100614" />       
+
+*Gambar 18: Penerapan looping pada program untuk mengulang menu atau proses input sampai kondisi tertentu terpenuhi.*
+
+Perulangan tersebut membuat menu utama terus ditampilkan setelah pengguna menyelesaikan suatu proses. Program hanya berhenti ketika pengguna memilih menu 5. Keluar.
+
+Program juga menggunakan while pada proses validasi input. Jika input yang diberikan tidak sesuai aturan, pengguna akan diminta memasukkan kembali data sampai input valid.
+
+Selain itu, for digunakan ketika program menampilkan data pengaduan yang tersimpan dalam ArrayList, sehingga setiap object pengaduan dapat ditampilkan secara berurutan.
