@@ -436,9 +436,7 @@ Sedangkan pada `pengaduanDarurat`:
 
 *Gambar 15: Penerapan method overriding pada `getTingkatUrgensi()` di subclass untuk menghasilkan tingkat urgensi sesuai jenis pengaduan.*
 
-Method `getDetailPengaduan()` juga dioverride pada kedua subclass untuk menampilkan informasi tambahan sesuai dengan jenis pengaduannya.
-
-Penerapan ini membuat method yang sama dapat menghasilkan perilaku yang berbeda sesuai object yang digunakan.
+Method `getDetailPengaduan()` juga dioverride pada kedua subclass untuk menampilkan informasi tambahan sesuai dengan jenis pengaduannya. Penerapan ini membuat method yang sama dapat menghasilkan perilaku yang berbeda sesuai object yang digunakan.
 
 ---
 
@@ -487,8 +485,4 @@ Pada menu utama, program menggunakan do-while:
 
 *Gambar 18: Penerapan looping pada program untuk mengulang menu atau proses input sampai kondisi tertentu terpenuhi.*
 
-Perulangan tersebut membuat menu utama terus ditampilkan setelah pengguna menyelesaikan suatu proses. Program hanya berhenti ketika pengguna memilih menu 5. Keluar.
-
-Program juga menggunakan while pada proses validasi input. Jika input yang diberikan tidak sesuai aturan, pengguna akan diminta memasukkan kembali data sampai input valid.
-
-Selain itu, for digunakan ketika program menampilkan data pengaduan yang tersimpan dalam ArrayList, sehingga setiap object pengaduan dapat ditampilkan secara berurutan.
+Perulangan tersebut membuat menu utama terus ditampilkan setelah pengguna menyelesaikan suatu proses. Program hanya berhenti ketika pengguna memilih menu 5. Keluar. Program juga menggunakan while pada proses validasi input. Jika input yang diberikan tidak sesuai aturan, pengguna akan diminta memasukkan kembali data sampai input valid. Selain itu, for digunakan ketika program menampilkan data pengaduan yang tersimpan dalam ArrayList, sehingga setiap object pengaduan dapat ditampilkan secara berurutan.
